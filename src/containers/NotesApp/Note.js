@@ -21,7 +21,7 @@ export default function Note({ note, onSelect }) {
     <StyledDiv className="mt-2" onClick={() => { onSelect(note) }} status={note.selected}>
       <h5>{note.title}</h5>
       <p>{note.content.substring(0, BODY_MAX_LENGTH)}{note.content.length > BODY_MAX_LENGTH ? "..." : ""}</p>
-      <div className='font-italic font-weight-light d-flex justify-content-between' style={{ fontSize: "0.85rem" }}>
+      <div className='font-italic font-weight-light text-right' style={{ fontSize: "0.85rem" }}>
         {new Date(note.timeUpdated).toLocaleString(undefined, { dateStyle: "full", timeStyle: "short" })}
       </div>
     </StyledDiv>
